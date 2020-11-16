@@ -1,4 +1,4 @@
-{% set version = '0.9.7' %}
+{% set version = "0.9.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/Luminescence_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/Luminescence/Luminescence_{{ version }}.tar.gz
-  sha256: 2883061858400eb6a16d8ad05679037b9854f59a5497dceb2c41950979545497
+  sha256: 7a48fc5c817597cdb771dd772cb5483f0ec6e617247b10fd357517acd505b581
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   # package conflicts
   skip: true  # [win]
@@ -76,12 +76,10 @@ test:
 about:
   home: https://CRAN.R-project.org/package=Luminescence
   license: GPL-3.0-only
-  summary: A collection of various R functions for the purpose of Luminescence dating data analysis.
-    This includes, amongst others, data import, export, application of age models, curve
-    deconvolution, sequence analysis and plotting of equivalent dose distributions.
+  summary: A collection of various R functions for the purpose of Luminescence dating data analysis. This includes, amongst others, data import, export, application of age models, curve deconvolution, sequence analysis and plotting of equivalent dose distributions.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
