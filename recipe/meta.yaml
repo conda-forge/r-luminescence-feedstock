@@ -1,4 +1,4 @@
-{% set version = "0.9.16" %}
+{% set version = "0.9.17" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/Luminescence_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/Luminescence/Luminescence_{{ version }}.tar.gz
-  sha256: 37ced5d7dcccc0a3237dcbccaafd3a40c66d3dbf9e4b8703c02e007311454845
+  sha256: ba9a9e135f3c4641ad73a3112ba5526bbe7607fe14bff76453304ee0006e121d
 
 build:
   merge_build_host: true  # [win]
