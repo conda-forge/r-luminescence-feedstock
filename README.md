@@ -3,6 +3,7 @@ About r-luminescence-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-luminescence-feedstock/blob/main/LICENSE.txt)
 
+
 About r-luminescence
 --------------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=Luminescence
 Package license: GPL-3.0-only
 
 Summary: A collection of various R functions for the purpose of Luminescence dating data analysis. This includes, amongst others, data import, export, application of age models, curve deconvolution, sequence analysis and plotting of equivalent dose distributions.
+
 About r-luminescence
 --------------------
 
