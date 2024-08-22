@@ -1,6 +1,5 @@
 {% set version = "0.9.23" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-luminescence
@@ -13,9 +12,9 @@ source:
   sha256: 857a8e7e44cd8a9bacdde0185d0c12388d24945bd00cf881f44071e145d455e2
 
 build:
-  merge_build_host: true  # [win]
-  skip: true  # [win]
-  number: 0
+  # Checking windows to see if it passes. Uncomment the line if it fails.
+  # skip: true  # [win]
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -23,7 +22,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -51,7 +52,6 @@ requirements:
     - r-zoo >=1.8_12
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-deoptim >=2.2_8
     - r-rcpp >=1.0.12
     - r-rcpparmadillo >=0.12.8.4.0
