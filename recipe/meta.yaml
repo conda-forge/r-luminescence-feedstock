@@ -1,4 +1,4 @@
-{% set version = "1.0.1" %}
+{% set version = "1.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/Luminescence_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/Luminescence/Luminescence_{{ version }}.tar.gz
-  sha256: 41e42fccd4628564722230d3b7d78717ad483ea2290f5a03774d1a85dd71d6f2
+  sha256: 08b3e0515d2506921080d7f8dffc9716296f4aaa4535dcc7420402edade05916
 
 build:
   # Checking windows to see if it passes. Uncomment the line if it fails.
