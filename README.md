@@ -7,7 +7,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-luminescence-
 About r-luminescence
 --------------------
 
-Home: https://CRAN.R-project.org/package=Luminescence
+Home: https://r-lum.github.io/Luminescence/
 
 Package license: GPL-3.0-only
 
@@ -16,7 +16,7 @@ Summary: A collection of various R functions for the purpose of Luminescence dat
 About r-luminescence
 --------------------
 
-Home: https://CRAN.R-project.org/package=Luminescence
+Home: https://r-lum.github.io/Luminescence/
 
 Package license: GPL-3.0-only
 
