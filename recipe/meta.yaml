@@ -16,6 +16,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -35,10 +39,9 @@ requirements:
     - r-base
     - r-deoptim >=2.2_8
     - r-rcpp >=1.0.12
-    - r-rcpparmadillo >=0.12.8.4.0
     - r-xml >=3.99_0.16
     - r-bbmle >=1.0.25.1
-    - r-data.table >=1.15.4
+    - r-data.table >=1.18.2.1
     - r-httr >=1.4.7
     - r-interp >=1.1_6
     - r-lamw >=2.2.3
@@ -50,10 +53,9 @@ requirements:
     - r-base
     - r-deoptim >=2.2_8
     - r-rcpp >=1.0.12
-    - r-rcpparmadillo >=0.12.8.4.0
     - r-xml >=3.99_0.16
     - r-bbmle >=1.0.25.1
-    - r-data.table >=1.15.4
+    - r-data.table >=1.18.2.1
     - r-httr >=1.4.7
     - r-interp >=1.1_6
     - r-lamw >=2.2.3
@@ -68,7 +70,7 @@ test:
     - "\"%R%\" -e \"library('Luminescence')\""  # [win]
 
 about:
-  home: https://CRAN.R-project.org/package=Luminescence
+  home: https://r-lum.github.io/Luminescence/
   license: GPL-3.0-only
   summary: A collection of various R functions for the purpose of Luminescence dating data analysis. This includes, amongst others, data import, export, application of age models, curve deconvolution, sequence analysis and plotting of equivalent dose distributions.
   license_family: GPL3
